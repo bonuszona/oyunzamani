@@ -12,44 +12,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #0a0a0a;
-      overflow: hidden;
-      position: relative;
       text-align: center;
+      background-color: #8B0000; /* Tünd qırmızı kazino rəngi */
       color: #fff;
     }
 
-    /* Arka Plan Jeton ve Kartlar Animasyonu */
-    .bg-item {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      animation: float 10s linear infinite;
-      opacity: 0.8;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(-100px) rotate(0deg); }
-      100% { transform: translateY(110vh) rotate(360deg); }
-    }
-
     .container {
-      position: relative;
-      z-index:1;
       background: rgba(0,0,0,0.7);
       padding: 50px 30px;
-      border-radius: 25px;
-      max-width: 420px;
-      width: 100%;
-      box-shadow: 0 5px 25px rgba(255,255,255,0.2);
+      border-radius: 20px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     }
 
     h1 {
       font-size: 2.5em;
       margin-bottom: 20px;
-      color: #ffd700;
+      color: #FFD700; /* Qızılı yazı */
     }
 
     p {
@@ -60,34 +40,12 @@
     .bonus {
       font-size: 2em;
       font-weight: bold;
-      color: #00ffcc;
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .slot-number {
-      width: 50px;
-      height: 60px;
-      margin: 0 5px;
-      background: #111;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.8em;
-      box-shadow: 0 0 10px #00ffcc;
-      animation: spin 1s infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+      color: #00FFCC; /* Bonus rəngi */
+      margin-bottom: 40px;
     }
 
     .btn {
-      background: linear-gradient(45deg, #ff6b6b, #feca57);
+      background-color: #FF4500; /* Parlaq düymə */
       color: #fff;
       padding: 18px 40px;
       border: none;
@@ -97,46 +55,27 @@
       transition: 0.3s;
       text-decoration: none;
       display: inline-block;
-      box-shadow: 0 0 20px rgba(255,0,150,0.6);
     }
 
     .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px #ff00aa;
+      background-color: #FF6347;
+      transform: scale(1.05);
     }
 
     @media(max-width:500px){
       h1 { font-size: 2em; }
       p { font-size: 1em; }
-      .bonus { font-size: 1.5em; flex-wrap: wrap; }
-      .slot-number { width: 40px; height: 50px; font-size: 1.5em; margin: 3px; }
+      .bonus { font-size: 1.5em; margin-bottom: 30px; }
       .btn { font-size: 1.1em; padding: 15px 30px; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Arka Plan Elementleri -->
-  <div class="bg-item" style="top:-50px; left:20%; background-image:url('https://i.ibb.co/LzFfK6v/chip.png'); animation-duration:12s;"></div>
-  <div class="bg-item" style="top:-50px; left:50%; background-image:url('https://i.ibb.co/7b0L2Nv/cards.png'); animation-duration:15s;"></div>
-  <div class="bg-item" style="top:-50px; left:80%; background-image:url('https://i.ibb.co/LzFfK6v/chip.png'); animation-duration:18s;"></div>
-
   <div class="container">
     <h1>Hoş Geldiniz!</h1>
     <p>Hemen kaydol ve oyun dünyasına katıl!</p>
-    <div class="bonus">
-      <div class="slot-number">1</div>
-      <div class="slot-number">5</div>
-      <div class="slot-number">0</div>
-      <div class="slot-number">%</div>
-      <div class="slot-number">B</div>
-      <div class="slot-number">O</div>
-      <div class="slot-number">N</div>
-      <div class="slot-number">U</div>
-      <div class="slot-number">S</div>
-    </div>
+    <div class="bonus">150% BONUS + 150 FS</div>
     <a href="https://trckitr.com/?serial=61330963&creative_id=5081" class="btn">Şimdi Oyna</a>
   </div>
-
 </body>
 </html>
