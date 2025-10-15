@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>150% Bonus + 150 FS</title>
   <style>
-    /* Reset */
     * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
 
     body {
@@ -14,94 +13,60 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: radial-gradient(circle at center, #1b0035, #500060, #ff007f);
-      overflow: hidden;
+      background: linear-gradient(135deg, #4a00e0, #8e2de2);
       color: #fff;
     }
 
-    /* Neon Animasyonlu Arka Plan Işıkları */
-    body::before {
-      content:"";
-      position:absolute;
-      width:200%;
-      height:200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
-      animation: moveBG 10s linear infinite;
-      z-index:0;
-    }
-
-    @keyframes moveBG {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
     .container {
-      position: relative;
-      z-index:1;
-      background: rgba(0,0,0,0.7);
-      padding: 50px 30px;
-      border-radius: 25px;
-      box-shadow: 0 0 30px rgba(255,0,150,0.5);
-      max-width: 420px;
+      background: rgba(0,0,0,0.75);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+      max-width: 400px;
       width: 100%;
     }
 
     h1 {
-      font-size: 2.5em;
-      color: #ffdd59;
+      font-size: 2.2em;
       margin-bottom: 15px;
-      text-shadow: 0 0 10px #fff, 0 0 20px #ffdd59, 0 0 30px #ff00aa;
-      animation: glowText 1.5s ease-in-out infinite alternate;
-    }
-
-    @keyframes glowText {
-      0% { text-shadow: 0 0 10px #fff, 0 0 20px #ffdd59, 0 0 30px #ff00aa; }
-      100% { text-shadow: 0 0 20px #fff, 0 0 40px #ffdd59, 0 0 60px #ff00aa; }
+      color: #ffd700;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-bottom: 25px;
     }
 
     .bonus {
-      font-size: 2em;
+      font-size: 1.8em;
       font-weight: bold;
-      color: #1dd1a1;
+      color: #00ffcc;
       margin-bottom: 30px;
-      text-shadow: 0 0 10px #fff, 0 0 20px #1dd1a1, 0 0 30px #00ffcc;
-      animation: neon 1.2s ease-in-out infinite alternate;
-    }
-
-    @keyframes neon {
-      0% { text-shadow: 0 0 5px #fff, 0 0 15px #1dd1a1, 0 0 25px #00ffcc; }
-      100% { text-shadow: 0 0 20px #fff, 0 0 40px #1dd1a1, 0 0 60px #00ffcc; }
     }
 
     .btn {
-      background: linear-gradient(45deg, #ff6b6b, #feca57);
+      background: #ff6b6b;
       color: #fff;
-      padding: 18px 40px;
+      padding: 15px 35px;
       border: none;
       border-radius: 50px;
-      font-size: 1.3em;
+      font-size: 1.2em;
       cursor: pointer;
       transition: 0.3s;
       text-decoration: none;
       display: inline-block;
-      box-shadow: 0 0 20px rgba(255,0,150,0.6), 0 0 40px rgba(255,255,0,0.4);
     }
 
     .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px #ff00aa, 0 0 50px #ffdd59;
+      background: #ee5253;
+      transform: scale(1.05);
     }
 
     @media(max-width:500px){
-      h1 { font-size: 2em; }
+      h1 { font-size: 1.8em; }
       p { font-size: 1em; }
       .bonus { font-size: 1.5em; }
-      .btn { font-size: 1.1em; padding: 15px 30px; }
+      .btn { font-size: 1.1em; padding: 12px 30px; }
     }
   </style>
 </head>
