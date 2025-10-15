@@ -12,70 +12,131 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background: #0a0a0a;
+      overflow: hidden;
+      position: relative;
       text-align: center;
-      background: linear-gradient(135deg, #4a00e0, #8e2de2);
       color: #fff;
     }
 
+    /* Arka Plan Jeton ve Kartlar Animasyonu */
+    .bg-item {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: float 10s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(-100px) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
     .container {
-      background: rgba(0,0,0,0.75);
-      padding: 40px 30px;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-      max-width: 400px;
+      position: relative;
+      z-index:1;
+      background: rgba(0,0,0,0.7);
+      padding: 50px 30px;
+      border-radius: 25px;
+      max-width: 420px;
       width: 100%;
+      box-shadow: 0 5px 25px rgba(255,255,255,0.2);
     }
 
     h1 {
-      font-size: 2.2em;
-      margin-bottom: 15px;
+      font-size: 2.5em;
+      margin-bottom: 20px;
       color: #ffd700;
     }
 
     p {
-      font-size: 1.1em;
-      margin-bottom: 25px;
-    }
-
-    .bonus {
-      font-size: 1.8em;
-      font-weight: bold;
-      color: #00ffcc;
+      font-size: 1.2em;
       margin-bottom: 30px;
     }
 
+    .bonus {
+      font-size: 2em;
+      font-weight: bold;
+      color: #00ffcc;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .slot-number {
+      width: 50px;
+      height: 60px;
+      margin: 0 5px;
+      background: #111;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8em;
+      box-shadow: 0 0 10px #00ffcc;
+      animation: spin 1s infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
     .btn {
-      background: #ff6b6b;
+      background: linear-gradient(45deg, #ff6b6b, #feca57);
       color: #fff;
-      padding: 15px 35px;
+      padding: 18px 40px;
       border: none;
       border-radius: 50px;
-      font-size: 1.2em;
+      font-size: 1.3em;
       cursor: pointer;
       transition: 0.3s;
       text-decoration: none;
       display: inline-block;
+      box-shadow: 0 0 20px rgba(255,0,150,0.6);
     }
 
     .btn:hover {
-      background: #ee5253;
-      transform: scale(1.05);
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #ff00aa;
     }
 
     @media(max-width:500px){
-      h1 { font-size: 1.8em; }
+      h1 { font-size: 2em; }
       p { font-size: 1em; }
-      .bonus { font-size: 1.5em; }
-      .btn { font-size: 1.1em; padding: 12px 30px; }
+      .bonus { font-size: 1.5em; flex-wrap: wrap; }
+      .slot-number { width: 40px; height: 50px; font-size: 1.5em; margin: 3px; }
+      .btn { font-size: 1.1em; padding: 15px 30px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Arka Plan Elementleri -->
+  <div class="bg-item" style="top:-50px; left:20%; background-image:url('https://i.ibb.co/LzFfK6v/chip.png'); animation-duration:12s;"></div>
+  <div class="bg-item" style="top:-50px; left:50%; background-image:url('https://i.ibb.co/7b0L2Nv/cards.png'); animation-duration:15s;"></div>
+  <div class="bg-item" style="top:-50px; left:80%; background-image:url('https://i.ibb.co/LzFfK6v/chip.png'); animation-duration:18s;"></div>
+
   <div class="container">
     <h1>Hoş Geldiniz!</h1>
     <p>Hemen kaydol ve oyun dünyasına katıl!</p>
-    <div class="bonus">150% BONUS + 150 FS</div>
+    <div class="bonus">
+      <div class="slot-number">1</div>
+      <div class="slot-number">5</div>
+      <div class="slot-number">0</div>
+      <div class="slot-number">%</div>
+      <div class="slot-number">B</div>
+      <div class="slot-number">O</div>
+      <div class="slot-number">N</div>
+      <div class="slot-number">U</div>
+      <div class="slot-number">S</div>
+    </div>
     <a href="https://trckitr.com/?serial=61330963&creative_id=5081" class="btn">Şimdi Oyna</a>
   </div>
+
 </body>
 </html>
